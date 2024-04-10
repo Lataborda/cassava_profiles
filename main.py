@@ -355,13 +355,13 @@ with BCP:
 				
 				st.divider()
 				st.write('***Result of closed answers: How is the preference for each trait***')
-				st.image('data/pe1.PNG', caption="Color preference")
+				st.image('data/pe1.png', caption="Color preference")
 				st.divider()
-				st.image('data/pe2.PNG', caption="Friability preference")
+				st.image('data/pe2.png', caption="Friability preference")
 				st.divider()
-				st.image('data/pe3.PNG', caption="Bitter, Fibrous and Sitcky preference")
+				st.image('data/pe3.png', caption="Bitter, Fibrous and Sitcky preference")
 				st.divider()
-				st.image('data/pe4.PNG', caption="Hardness, Floury and Dry preference")
+				st.image('data/pe4.png', caption="Hardness, Floury and Dry preference")
 
 			elif moment == ("purchasing cassava"): 
 				
