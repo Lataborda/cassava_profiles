@@ -38,7 +38,7 @@ with MS:
 	
 	if DD == "**Consumer market segments (MS)**":
 	    
-
+		st.subheader('Consumer market segments (MS)')
 		st.markdown("The following diagram represents the two main sets of cassava market segments. These are commonly referred to as 'sweet cassava' and 'Sour or industrial cassava'. The scheme specifies the amounts of cassava hectares planted in 2022 for each of the segments presented.")
 		  
 		  #Diagrama de flujo
