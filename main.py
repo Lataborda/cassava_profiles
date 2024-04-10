@@ -427,15 +427,15 @@ with BCP:
 					)
 				st.divider()
 				st.write('***Result of closed answers: How is the preference for each trait***')
-				st.image('data/pu1.PNG', caption="Preferred root length")
+				st.image('data/pu1.png', caption="Preferred root length")
 				st.divider()
-				st.image('data/pu2.PNG', caption="Preferred peduncle length")
+				st.image('data/pu2.png', caption="Preferred peduncle length")
 				st.divider()
-				st.image('data/pu3.PNG', caption="Preferred skin color")
+				st.image('data/pu3.png', caption="Preferred skin color")
 				st.divider()
-				st.image('data/pu4.PNG', caption="Preferred pulp color")
+				st.image('data/pu4.png', caption="Preferred pulp color")
 				st.divider()
-				st.image('data/pu5.PNG', caption="Preferred root form")
+				st.image('data/pu5.png', caption="Preferred root form")
 
 
 with LQD:
