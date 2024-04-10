@@ -25,8 +25,8 @@ with header:
 	st.markdown('With this tool you will be able to iterate between: 1) the segments of cassava seed products in Colombia :blue[(SMPS)], 2) the consumer market segments :blue[(MS)] of cassava consumption and 3) the main quality characteristics required in each segment :blue[(TTP)]')
 	
 	st.divider()
-	
-
+	st.write(' 👈To the left, you will find a menu with the different data visualization options used for the creation of quality and preference profiles')
+	st.divider()
 	
 	DD = st.sidebar.radio(
 	    "Select the type of data you want to display",
