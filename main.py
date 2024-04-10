@@ -287,7 +287,7 @@ with BCP:
 			st.divider()
 			
 			#moment
-			moment = st.selectbox('***Select the moment:***',options = ['purchasing cassava', "Eating Cassava"])
+			moment = st.selectbox('**Select the moment:**',options = ['purchasing cassava', "Eating Cassava"])
 			
 			if moment == "Eating Cassava":
 
