@@ -601,7 +601,7 @@ with PP:
 			with cols[0]:
 			     #with ui.card():
 			       #  ui.element()
-			    ui.card(title="Dry matter", content=p5, description="Content percentage", key="card1").render()
+			    ui.card(title="Dry matter", content=f"{p5}%", description="Content percentage", key="card1").render()
 			with cols[1]:
 			    ui.card(title="b_carotene content", content=p6, description="(ug/g) NIRS 400-2500 nm", key="card2").render()
 			with cols[2]:
