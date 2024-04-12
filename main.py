@@ -39,14 +39,14 @@ with MS:
 	if DD == "**Consumer market segments (MS)**":
 	    
 		st.subheader('Consumer market segments (MS)')
-		st.markdown("The following diagram represents the two main sets of cassava market segments. These are commonly referred to as 'sweet cassava' and 'Sour or industrial cassava'. The scheme specifies the amounts of cassava hectares planted in 2022 for each of the segments presented.")
+		st.markdown("The following diagram represents the two main sets of cassava market segments. These are commonly referred to as 'sweet cassava' and 'Bitter or industrial cassava'. The scheme specifies the amounts of cassava hectares planted in 2022 for each of the segments presented.")
 		  
 		  #Diagrama de flujo
 
 		def create_flowchart():
 		    dot = Digraph()
 		    dot.node('A', 'SMPS')
-		    dot.node('B', 'Sour/Industrial')
+		    dot.node('B', 'Bitter/Industrial')
 		    dot.node('C', 'Sweets',shape='diamond')
 		    dot.node('D', 'Low-processing derivatives')
 		    dot.node('E', 'Native Starch')
@@ -86,7 +86,7 @@ with MS:
 		
 		
 		ui.badges(badge_list=[("To know the cassava production (ha) by segment (main group) and by region (department) please select each of the following options:", "secundary")], class_name="flex gap-2", key="main_badges1")
-		OP = ui.tabs(options=['Sweets', 'Sour/Industrial'], default_value='Sweets', key="Sweets")
+		OP = ui.tabs(options=['Sweets', 'Bitter/Industrial'], default_value='Sweets', key="Sweets")
 			
 		
 		st.divider()
@@ -140,12 +140,12 @@ with MS:
 			# Desplegar la tabla sin la columna de índice utilizando st.markdown
 			st.markdown(html, unsafe_allow_html=True)
 
-			st.page_link("https://sioc.minagricultura.gov.co/Yuca/Documentos/2021-03-31%20Cifras%20Sectoriales%20yuca.pdf", label="Source of information: Cadena Productiva de la Yuca Dirección de Cadenas Agrícolas y Forestales(2021)")
+			st.page_link("https://sioc.minagricultura.gov.co/Yuca/Documentos/2021-03-31%20Cifras%20Sectoriales%20yuca.pdf", label="Bitterce of information: Cadena Productiva de la Yuca Dirección de Cadenas Agrícolas y Forestales(2021)")
 			st.page_link("https://sioc.minagricultura.gov.co/Yuca/Documentos/2020-12-31%20Cifras%20Sectoriales%20yuca.pdf", label="Subsector Productivo de la Yuca. Dirección de Cadenas Agrícolas y Forestales(2020)")
 		
-		elif OP == "Sour/Industrial":
+		elif OP == "Bitter/Industrial":
 
-			st.header("Areas (ha) of Sour_cassava(ha) by department")
+			st.header("Areas (ha) of Bitter_cassava(ha) by department")
 
 			df = pd.read_csv("data/Pd11.csv", usecols=["Departament", "industria_cassava(ha)"])
 			Departament = df["Departament"]
@@ -197,7 +197,7 @@ with MS:
 			# Desplegar la tabla sin la columna de índice utilizando st.markdown
 			st.markdown(html, unsafe_allow_html=True)
 
-			st.page_link("https://sioc.minagricultura.gov.co/Yuca/Documentos/2021-03-31%20Cifras%20Sectoriales%20yuca.pdf", label="Source of information: Cadena Productiva de la Yuca Dirección de Cadenas Agrícolas y Forestales(2021)")
+			st.page_link("https://sioc.minagricultura.gov.co/Yuca/Documentos/2021-03-31%20Cifras%20Sectoriales%20yuca.pdf", label="Bitterce of information: Cadena Productiva de la Yuca Dirección de Cadenas Agrícolas y Forestales(2021)")
 			st.page_link("https://sioc.minagricultura.gov.co/Yuca/Documentos/2020-12-31%20Cifras%20Sectoriales%20yuca.pdf", label="Subsector Productivo de la Yuca. Dirección de Cadenas Agrícolas y Forestales(2020)")
 		
 
@@ -206,12 +206,12 @@ with SMPS:
 	if DD == "**Segments of cassava seed products (SMPS)**":
 
 			ui.badges(badge_list=[("To know the location of the main Segments of cassava seed products (SMPS) in Colombia, please select the following options:", "secundary")], class_name="flex gap-2", key="main_badges1")
-			LO = ui.tabs(options=['Sweets', 'Sour/Industrial'], default_value='Sweets', key="Sweets")
+			LO = ui.tabs(options=['Sweets', 'Bitter/Industrial'], default_value='Sweets', key="Sweets")
 			
 			#LO = st.radio(
 		    #"To know the location of the main Segments of cassava seed products (SMPS) in Colombia, please select the following options:",
-		    #["Sweets","Sour/Industrial"],
-		    #captions = ["Location of the main sweets_cassava seeds","Location of the main Sour/Industrial cassava seeds"])
+		    #["Sweets","Bitter/Industrial"],
+		    #captions = ["Location of the main sweets_cassava seeds","Location of the main Bitter/Industrial cassava seeds"])
 
 			if LO == "Sweets":
 
@@ -291,7 +291,7 @@ with SMPS:
 				folium_map = st_folium(m, width=500, height=500)
 
 
-			if LO == "Sour/Industrial":
+			if LO == "Bitter/Industrial":
 
 				with open('data/depto.json', 'r', encoding='utf-8') as f:
 				    geo_json_data = json.load(f)
@@ -517,7 +517,7 @@ with LQD:
 
 		st.header("Laboratory data on quality variables of commercial cassava referents")
 		ui.badges(badge_list=[("To view the quality test data for commercial varieties in each market segment select one of the following options ", "secundary")], class_name="flex gap-2", key="main_badges1")
-		LAP = ui.tabs(options=['Sweets', 'Sour/Industrial'], default_value='Sweets', key="Sweets")
+		LAP = ui.tabs(options=['Sweets', 'Bitter/Industrial'], default_value='Sweets', key="Sweets")
 			
 		if LAP == "Sweets":
 			
@@ -582,11 +582,11 @@ with LQD:
 
 
 
-		elif LAP == "Sour/Industrial":
+		elif LAP == "Bitter/Industrial":
 
 			
 			def cargar_datos(ruta_archivo):
-				df = pd.read_csv("data/sour1.csv", sep=None, engine='python', header=0, index_col=0)
+				df = pd.read_csv("data/Bitter1.csv", sep=None, engine='python', header=0, index_col=0)
 				return df
 
 
@@ -594,7 +594,7 @@ with LQD:
 			    #st.title('Visualizador de CSV con Streamlit')
 
 			    # Definir la ruta del archivo dentro de la carpeta 'data'
-			    ruta_archivo = 'data/sour1.csv'
+			    ruta_archivo = 'data/Bitter1.csv'
 		    
 			    try:
 			        df = cargar_datos(ruta_archivo)
@@ -610,7 +610,7 @@ with LQD:
 			st.divider()
 
 			# CGRAFICAS BARRAS POR VARIABLES AMARGAS
-			data_path = 'data/sour1.csv'  # Actualiza con la ruta a tu archivo CSV
+			data_path = 'data/Bitter1.csv'  # Actualiza con la ruta a tu archivo CSV
 			data = pd.read_csv(data_path)
 
 			# Título de la aplicación
@@ -651,7 +651,7 @@ with PP:
 		
 		st.subheader("Technical sheet")
 
-		TS = ui.tabs(options=['Boiled cassava', 'Sour cassava'], default_value='Boiled cassava', key="Boiled cassava")
+		TS = ui.tabs(options=['Boiled cassava', 'Bitter cassava'], default_value='Boiled cassava', key="Boiled cassava")
 
 		if TS == "Boiled cassava":
 
@@ -690,7 +690,7 @@ with PP:
 			    ui.card(title="Color", content="White", description="Acceptance probability > 80%", key="card6").render()
 
 
-		if TS == "Sour cassava":
+		if TS == "Bitter cassava":
 
 			
 			#with ui.element("div", className="flex gap-2", key="buttons_group1"):
@@ -698,7 +698,7 @@ with PP:
 			  # ui.element("link_button", text="Github", url="https://github.com/ObservedObserver/streamlit-shadcn-ui", variant="outline", key="btn2")
 				
 			##promedios
-			df = pd.read_csv('data/sour1.csv')
+			df = pd.read_csv('data/Bitter1.csv')
 
 			df.columns = df.columns.str.strip()
 
