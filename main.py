@@ -594,7 +594,7 @@ with LQD:
 			    #st.title('Visualizador de CSV con Streamlit')
 
 			    # Definir la ruta del archivo dentro de la carpeta 'data'
-			    ruta_archivo = 'data/Bitter1.csv'
+			    ruta_archivo = 'data/sour1.csv'
 		    
 			    try:
 			        df = cargar_datos(ruta_archivo)
