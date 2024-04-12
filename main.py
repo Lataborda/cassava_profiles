@@ -140,7 +140,7 @@ with MS:
 			# Desplegar la tabla sin la columna de índice utilizando st.markdown
 			st.markdown(html, unsafe_allow_html=True)
 
-			st.page_link("https://sioc.minagricultura.gov.co/Yuca/Documentos/2021-03-31%20Cifras%20Sectoriales%20yuca.pdf", label="Bitterce of information: Cadena Productiva de la Yuca Dirección de Cadenas Agrícolas y Forestales(2021)")
+			st.page_link("https://sioc.minagricultura.gov.co/Yuca/Documentos/2021-03-31%20Cifras%20Sectoriales%20yuca.pdf", label="Source of information: Cadena Productiva de la Yuca Dirección de Cadenas Agrícolas y Forestales(2021)")
 			st.page_link("https://sioc.minagricultura.gov.co/Yuca/Documentos/2020-12-31%20Cifras%20Sectoriales%20yuca.pdf", label="Subsector Productivo de la Yuca. Dirección de Cadenas Agrícolas y Forestales(2020)")
 		
 		elif OP == "Bitter/Industrial":
@@ -197,7 +197,7 @@ with MS:
 			# Desplegar la tabla sin la columna de índice utilizando st.markdown
 			st.markdown(html, unsafe_allow_html=True)
 
-			st.page_link("https://sioc.minagricultura.gov.co/Yuca/Documentos/2021-03-31%20Cifras%20Sectoriales%20yuca.pdf", label="Bitterce of information: Cadena Productiva de la Yuca Dirección de Cadenas Agrícolas y Forestales(2021)")
+			st.page_link("https://sioc.minagricultura.gov.co/Yuca/Documentos/2021-03-31%20Cifras%20Sectoriales%20yuca.pdf", label="Source of information: Cadena Productiva de la Yuca Dirección de Cadenas Agrícolas y Forestales(2021)")
 			st.page_link("https://sioc.minagricultura.gov.co/Yuca/Documentos/2020-12-31%20Cifras%20Sectoriales%20yuca.pdf", label="Subsector Productivo de la Yuca. Dirección de Cadenas Agrícolas y Forestales(2020)")
 		
 
@@ -586,7 +586,7 @@ with LQD:
 
 			
 			def cargar_datos(ruta_archivo):
-				df = pd.read_csv("data/Bitter1.csv", sep=None, engine='python', header=0, index_col=0)
+				df = pd.read_csv("data/sour1.csv", sep=None, engine='python', header=0, index_col=0)
 				return df
 
 
@@ -610,7 +610,7 @@ with LQD:
 			st.divider()
 
 			# CGRAFICAS BARRAS POR VARIABLES AMARGAS
-			data_path = 'data/Bitter1.csv'  # Actualiza con la ruta a tu archivo CSV
+			data_path = 'data/sour1.csv'  # Actualiza con la ruta a tu archivo CSV
 			data = pd.read_csv(data_path)
 
 			# Título de la aplicación
@@ -736,7 +736,7 @@ with PP:
 
 
 st.markdown('*Copyright (C) 2024 CIRAD, AGROSAVIA & CIAT*')
-st.caption('**Authors: Alejandro Taborda, (latabordaa@unal.edu.co), Thierry Tran, Amparo Rosero, Katia Contreras, Luis Londoño, Alejandra Ospina, Jhon Moreno, Jorge Luna, Cristhian Duarte, Robert Andrade, Jhonatha Newby**')
+st.caption('**Authors: Alejandro Taborda, (latabordaa@unal.edu.co), Thierry Tran, Amparo Rosero, Katia Contreras, Luis Londoño, Alejandra Ospina, Jhon Moreno, Jorge Luna, Cristhian Duarte, Robert Andrade, Jhonathan Newby**')
 
 	
 	
