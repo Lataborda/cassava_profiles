@@ -293,25 +293,61 @@ with SMPS:
 
 			if LO == "Sour/Industrial":
 
-				st.subheader("Location of the main Sour/Industrial cassava commercial varieties")
-				st.caption('click on each point to see the referent variety of its respective region')
+				with open('data/depto.json', 'r', encoding='utf-8') as f:
+				    geo_json_data = json.load(f)
 
-				#VARIEDADES DE MESA UBICACIÓN
-				m = folium.Map([5.336683, -75.589267], zoom_start=5.50)
+				# Diccionarios con datos de ejemplo
+				departamento_colores = {
+				    
+				    "BOLIVAR": "green",
+				    "CORDOBA": "green",
+				    "SUCRE": "green",
+				    "CAUCA": "blue",
+				    
+				}
 
-				folium.Marker(
-				    location=[9.319316, -75.321742],
-				    popup=folium.Popup("Mtat, Belloti, and Burrona in Caribe", parse_html=True, max_width=100),
-				).add_to(m)
+				departamento_etiquetas = {
+				   "BOLIVAR": "Bolivar: Tai8, Belloti, Ropain, Sinuana, Burrona",
+				    "CORDOBA": "Córdoba: Tai8, Belloti, Ropain, Sinuana, Burrona",
+				    "SUCRE": "Sucre: Tai8, Belloti, Ropain, Sinuana, Burrona",
+				    "CAUCA": "Cauca: Algodona, Ica48, Francesa, Cumbre",
+				}
 
-				folium.Marker(
-				    location=[2.755859, -76.624426],
-				    popup=folium.Popup("ICA48, Amarga and Algodona in Cauca", parse_html=True, max_width="100%"),
-				).add_to(m)
+				m = folium.Map(location=[4.5709, -74.2973], zoom_start=5)
 
-				
-				# Render the Folium map using st_folium
-				folium_map = st_folium(m, width=400, height=550,)
+				# Función que devuelve el color correspondiente al departamento
+				def get_color_for_department(department_name):
+				    return departamento_colores.get(department_name, "#808080")  # Gris por defecto
+
+				# Función que personaliza el estilo de cada feature basado en su nombre
+				def style_function(feature):
+				    return {
+				        "fillColor": get_color_for_department(feature["properties"]["NOMBRE_DPT"]),
+				        "color": "black",
+				        "weight": 2,
+				        "dashArray": "5, 5",
+				        "fillOpacity": 0.6,
+				    }
+
+				# Añade cada departamento como un GeoJson independiente con su Popup correspondiente
+				for feature in geo_json_data['features']:
+				    nombre_dpto = feature['properties']['NOMBRE_DPT']
+				    etiqueta = departamento_etiquetas.get(nombre_dpto, "Information not available")
+				    color = get_color_for_department(nombre_dpto)
+				    
+				    folium.GeoJson(
+				        feature,
+				        style_function=lambda x, color=color: {
+				            "fillColor": color,
+				            "color": "black",
+				            "weight": 1,
+				            "dashArray": "5, 5",
+				            "fillOpacity": 0.6
+				        }
+				    ).add_child(folium.Popup(etiqueta)).add_to(m)
+
+				# Mostrar el mapa en Streamlit
+				folium_map = st_folium(m, width=500, height=500)
 
 
 with BCP:
