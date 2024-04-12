@@ -25,7 +25,7 @@ with header:
 	st.markdown('This tool allows you to explore and visualize the following aspects of the cassava market in Colombia: 1) the seed products market segments :blue[(SPMS)], 2) the consumer market segments :blue[(CMS)] for cassava consumption and 3) the primary quality characteristics required in each segment :blue[(TPP)]')
 	
 	st.divider()
-	st.write(' 👈To the left, you will find a menu with the different data visualization options used for the creation of quality and preference profiles')
+	st.write(' 👈On the left, you will find a menu featuring various data visualization options used to create quality and preference profiles.')
 	st.divider()
 	
 	DD = st.sidebar.radio(
