@@ -9,7 +9,7 @@ from streamlit_shadcn_ui import slider, input, textarea, radio_group, switch
 import streamlit_shadcn_ui as ui
 
 import folium
-
+import json
 
 header = st.container()
 MS = st.container() #Consumer Market segments
@@ -218,41 +218,77 @@ with SMPS:
 				st.subheader("Location of the main sweet cassava commercial varieties")
 				st.caption('click on each point to see the referent variety of its respective region')
 
-				#VARIEDADES DE MESA UBICACIÓN
-				m = folium.Map([5.336683, -75.589267], zoom_start=5.50)
+				#MAPA DEPARTAMENTOS VARIEDADES DULCES
+				# Cargar datos GeoJSON
+				with open('data/depto.json', 'r', encoding='utf-8') as f:
+				    geo_json_data = json.load(f)
 
-				folium.Marker(
-				    location=[9.842275016240356, -75.15471855351905],
-				    popup=folium.Popup("Venezolana in Caribe", parse_html=True, max_width=100),
-				).add_to(m)
+				# Diccionarios con datos de ejemplo
+				departamento_colores = {
+				    "ANTIOQUIA": "green",
+				    "MAGDALENA": "green",
+				    "BOLIVAR": "green",
+				    "CORDOBA": "green",
+				    "SUCRE": "green",
+				    "CESAR": "green",
+				    "META": "brown",
+				    "CAUCA": "blue",
+				    "NARIÑO": "yellow",
+				    "CALDAS": "purple",
+				    "QUINDIO": "purple",
+				    "RISARALDA": "purple"
+				}
 
-				folium.Marker(
-				    location=[2.755859, -76.624426],
-				    popup=folium.Popup("Algodona in Cauca", parse_html=True, max_width="100%"),
-				).add_to(m)
+				departamento_etiquetas = {
+				    "ANTIOQUIA": "North of Antioquia: Venezolana, Ica Costeña, Azulita, Valencia",
+				    "MAGDALENA": "Magdalena: Venezolana, Ica Costeña, Azulita, Valencia",
+				    "BOLIVAR": "Bolivar: Venezolana, Ica Costeña, Azulita, Valencia",
+				    "CORDOBA": "Córdoba:Venezolana, Ica Costeña, Azulita, Valencia",
+				    "SUCRE": "Sucre: Venezolana, Ica Costeña, Azulita, Valencia",
+				    "CESAR": "Cesar: Venezolana, Ica Costeña, Azulita, Valencia",
+				    "META": "Meta: Brasilera",
+				    "CAUCA": "Cauca: Algodona",
+				    "NARIÑO": "Nariños's west: Yemadehuevo(yellow)",
+				    "CALDAS": "Caldas: Chirosa, Chirosa Morada, Sietemesina",
+				    "QUINDIO": "Quindío: Chirosa, Chirosa Morada, Sietemesina",
+				    "RISARALDA": "Risaralda: Chirosa, Chirosa Morada, Sietemesina"
+				}
 
-				folium.Marker(
-				    location=[3.566271, -73.686723],
-				    popup=folium.Popup("Brasilera in Llanos", parse_html=True, max_width="100%"),
-				).add_to(m)
+				m = folium.Map(location=[4.5709, -74.2973], zoom_start=5)
 
-				folium.Marker(
-				    location=[1.784186, -78.797162],
-				    popup=folium.Popup("Yema de huevo(Yellow) in Pacifico Tumaco", parse_html=True, max_width="100%"),
-				).add_to(m)
+				# Función que devuelve el color correspondiente al departamento
+				def get_color_for_department(department_name):
+				    return departamento_colores.get(department_name, "#808080")  # Gris por defecto
 
-				folium.Marker(
-				    location=[1.021240, -76.759270],
-				    popup=folium.Popup("Yema de huevo(Yellow) in Putumayo", parse_html=True, max_width="100%"),
-				).add_to(m)
+				# Función que personaliza el estilo de cada feature basado en su nombre
+				def style_function(feature):
+				    return {
+				        "fillColor": get_color_for_department(feature["properties"]["NOMBRE_DPT"]),
+				        "color": "black",
+				        "weight": 2,
+				        "dashArray": "5, 5",
+				        "fillOpacity": 0.6,
+				    }
 
-				folium.Marker(
-				    location=[4.555275, -75.681922],
-				    popup=folium.Popup("Chirosa and Sietemesina in Caldas/Quindio", parse_html=True, max_width="100%"),
-				).add_to(m)
+				# Añade cada departamento como un GeoJson independiente con su Popup correspondiente
+				for feature in geo_json_data['features']:
+				    nombre_dpto = feature['properties']['NOMBRE_DPT']
+				    etiqueta = departamento_etiquetas.get(nombre_dpto, "Information not available")
+				    color = get_color_for_department(nombre_dpto)
+				    
+				    folium.GeoJson(
+				        feature,
+				        style_function=lambda x, color=color: {
+				            "fillColor": color,
+				            "color": "black",
+				            "weight": 1,
+				            "dashArray": "5, 5",
+				            "fillOpacity": 0.6
+				        }
+				    ).add_child(folium.Popup(etiqueta)).add_to(m)
 
-				# Render the Folium map using st_folium
-				folium_map = st_folium(m, width=400, height=550,)
+				# Mostrar el mapa en Streamlit
+				folium_map = st_folium(m, width=500, height=500)
 
 
 			if LO == "Sour/Industrial":
