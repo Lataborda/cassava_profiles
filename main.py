@@ -22,7 +22,7 @@ PP =  st.container() #Product profile
 with header:
 
 	st.header('Preference and quality profiles by market segment for cassava in Colombia',divider='blue')
-	st.markdown('With this tool you will be able to iterate between: 1) the segments of cassava seed products in Colombia :blue[(SMPS)], 2) the consumer market segments :blue[(MS)] of cassava consumption and 3) the main quality characteristics required in each segment :blue[(TTP)]')
+	st.markdown('This tool allows you to explore and visualize the following aspects of the cassava market in Colombia: 1) the seed products market segments :blue[(SPMS)], 2) the consumer market segments :blue[(CMS)] for cassava consumption and 3) the primary quality characteristics required in each segment :blue[(TPP)]')
 	
 	st.divider()
 	st.write(' 👈To the left, you will find a menu with the different data visualization options used for the creation of quality and preference profiles')
