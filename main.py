@@ -698,7 +698,7 @@ with PP:
 			  # ui.element("link_button", text="Github", url="https://github.com/ObservedObserver/streamlit-shadcn-ui", variant="outline", key="btn2")
 				
 			##promedios
-			df = pd.read_csv('data/Bitter1.csv')
+			df = pd.read_csv('data/sour1.csv')
 
 			df.columns = df.columns.str.strip()
 
