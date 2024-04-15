@@ -716,7 +716,7 @@ with PP:
 
 			# Calcula el promedios 
 			pr4 = round(df.iloc[:, 3].mean(),1)#Dry matter
-			pr5 = df.iloc[:, 4].mean()#Starch contet (%)
+			pr5 = df.iloc[:, 4].mean()#Starch contebt (%)
 			pr6 = round(df.iloc[:, 5].mean(),1)#amilosa
 			pr7= round(df.iloc[:, 6].mean(),1) #pasting time
 			pr8 = round(df.iloc[:, 7].mean(),1) #pasting temperature
@@ -729,7 +729,7 @@ with PP:
 			       #  ui.element()
 			    ui.card(title="Dry matter", content=f"{pr4}%", description="(%) of the roost", key="card1").render()
 			with cols[1]:
-			    ui.card(title="Starch contet", content=f"{pr5}%", description="(%)of the roost", key="card2").render()
+			    ui.card(title="Starch content", content=f"{pr5}%", description="(%)of the root", key="card2").render()
 			with cols[2]:
 			    ui.card(title="Amylose", content=f"{pr6}%", description="(%) of the starch", key="card3").render()
 			
