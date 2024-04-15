@@ -219,10 +219,15 @@ with SMPS:
 				st.caption('click on each point to see the referent variety of its respective region')
 
 				#MAPA DEPARTAMENTOS VARIEDADES DULCES
-				# Cargar datos GeoJSON
-				with open('data/depto.json', 'r', encoding='utf-8') as f:
-				    geo_json_data = json.load(f)
-
+				# Aplicar el decorador de cache a la función de carga de datos
+				@st.cache(allow_output_mutation=True)
+				def load_data(file_path):
+				    with open(file_path, 'r', encoding='utf-8') as f:
+				        return json.load(f)
+				
+				# Usar la función con cache para cargar los datos GeoJSON
+				geo_json_data = load_data('data/depto.json')
+				
 				# Diccionarios con datos de ejemplo
 				departamento_colores = {
 				    "ANTIOQUIA": "green",
