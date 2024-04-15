@@ -360,7 +360,7 @@ with BCP:
 	if DD == "**Boiled cassava preference**":
 			
 			st.subheader("Consumer preference traits for boiled cassava")	
-			st.write('The following is a summary of the data obtained in 380 surveys, where the negative and positive traits at the time of purchasing and eating cassava were consulted. ')
+			st.write('In 2023, surveys were conducted with 380 cassava consumers across various regions in Colombia. Here is the breakdown of responses: 56% from the Caribbean, 14% from Valle and Cauca, 11% from Llanos Orientales, 9% from Altiplano Cundiboyacense, 4% from the zona cafetera and Tolima, 3% from Pacifico Sur and Putumayo, and 2% from Santanderes. The respondents identified the most significant positive and negative traits that influence their decisions when purchasing and consuming cassava')
 			st.divider()
 			
 			#moment
