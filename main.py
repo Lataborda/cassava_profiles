@@ -745,7 +745,7 @@ with PP:
 			with cols1[0]:
 			    ui.card(title="Starch pasting time", content=pr7, description="Time in minutes", key="card4").render()
 			with cols1[1]:
-			    ui.card(title="Starch pasting temperature", content=f"{pr6}⁰", description="Temperature in ⁰Celsius", key="card5").render()
+			    ui.card(title="Starch pasting temperature", content=f"{pr8}⁰", description="Temperature in ⁰Celsius", key="card5").render()
 			with cols1[2]:
 			    ui.card(title="Starch peak viscosity", content=pr9, description="Centipoises (cp)", key="card6").render()
 
