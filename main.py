@@ -197,6 +197,7 @@ with MS:
 			# Desplegar la tabla sin la columna de índice utilizando st.markdown
 			st.markdown(html, unsafe_allow_html=True)
 
+			st.divider()
 			st.page_link("https://sioc.minagricultura.gov.co/Yuca/Documentos/2021-03-31%20Cifras%20Sectoriales%20yuca.pdf", label="Source of information: Cadena Productiva de la Yuca Dirección de Cadenas Agrícolas y Forestales(2021)")
 			st.page_link("https://sioc.minagricultura.gov.co/Yuca/Documentos/2020-12-31%20Cifras%20Sectoriales%20yuca.pdf", label="Subsector Productivo de la Yuca. Dirección de Cadenas Agrícolas y Forestales(2020)")
 		
