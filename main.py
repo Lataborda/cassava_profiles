@@ -359,9 +359,9 @@ with BCP:
 			st.divider()
 			
 			#moment
-			moment = st.selectbox('**Select the moment:**',options = ['purchasing cassava', "Eating Cassava"])
+			moment = st.selectbox('**Select the moment:**',options = ['Purchasing cassava', "Consuming Cassava"])
 			
-			if moment == "Eating Cassava":
+			if moment == "Consuming Cassava":
 
 				st.write('***Result of open answers: How is the cassava that consumer likes most and less...***')
 
@@ -435,7 +435,7 @@ with BCP:
 				st.divider()
 				st.image('data/pe4.png', caption="Hardness, Floury and Dry preference")
 
-			elif moment == ("purchasing cassava"): 
+			elif moment == ("Purchasing cassava"): 
 				
 				st.write('***Result of open answers: How is the cassava that consumer likes most and less...***')
 				#Traits cassava (open responses) at purchasing moment
