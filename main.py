@@ -522,9 +522,9 @@ with LQD:
 
 		st.header("Laboratory data on quality variables of commercial cassava referents")
 		ui.badges(badge_list=[("To view the quality test data for commercial varieties in each market segment select one of the following options ", "secundary")], class_name="flex gap-2", key="main_badges1")
-		LAP = ui.tabs(options=['Sweets', 'Bitter/Industrial'], default_value='Sweets', key="Sweets")
+		LAP = ui.tabs(options=['Sweet cassava', 'Bitter/Industrial'], default_value='Sweet cassava', key="Sweet cassava")
 			
-		if LAP == "Sweets":
+		if LAP == "Sweet cassava":
 			
 
 			def cargar_datos(ruta_archivo):
