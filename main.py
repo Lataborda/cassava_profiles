@@ -549,6 +549,9 @@ with LQD:
 			if __name__ == "__main__":
 			    main()
 
+			st.subheader("Protocols used")
+			st.page_link("https://onlinelibrary.wiley.com/doi/abs/10.1002/star.200800058", label="Dry matter: Sanchez et al. (2009)")
+
 			st.divider()
 
 			# grafico de barras iterando variables
@@ -585,9 +588,7 @@ with LQD:
 			    ax.set_xticklabels(data['Variety'], rotation=90)
 			    st.pyplot(fig)
 
-			st.subheader("Protocols used")
-			st.page_link("https://onlinelibrary.wiley.com/doi/abs/10.1002/star.200800058", label="Dry matter: Sanchez et al. (2009)")
-
+			
 		elif LAP == "Bitter/Industrial":
 
 			
