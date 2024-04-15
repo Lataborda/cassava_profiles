@@ -661,7 +661,7 @@ with PP:
 
 		st.header("Cassava Product profile")
 		#ui.badges(badge_list=[("Product profile", "destructive")], class_name="flex gap-2", key="main_badges1")
-		st.caption("This is a proposed technical sheet for the different uses of cassava in Colombia. The values shown on the cards correspond to the averages of measurements made on commercial varieties. ")
+		st.caption("This document serves as a proposed technical datasheet detailing the various applications of cassava in Colombia. The values presented on this sheet represent average measurements taken from commercial varieties ")
 		
 		st.subheader("Technical sheet")
 
