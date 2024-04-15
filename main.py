@@ -727,7 +727,7 @@ with PP:
 			with cols[0]:
 			     #with ui.card():
 			       #  ui.element()
-			    ui.card(title="Dry matter", content=f"{pr4}%", description="(%) of the roost", key="card1").render()
+			    ui.card(title="Dry matter", content=f"{pr4}%", description="(%) of the root", key="card1").render()
 			with cols[1]:
 			    ui.card(title="Starch content", content=f"{pr5}%", description="(%)of the root", key="card2").render()
 			with cols[2]:
