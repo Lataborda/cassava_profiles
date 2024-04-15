@@ -517,7 +517,7 @@ with LQD:
 
 
 		st.header("Laboratory data on quality variables of commercial cassava referents")
-		ui.badges(badge_list=[("To view the quality test data for commercial varieties in each market segment select one of the following options ", "secundary")], class_name="flex gap-2", key="main_badges1")
+		ui.badges(badge_list=[("To access quality test data for commercial varieties across different market segments, please select one of the following options: ", "secundary")], class_name="flex gap-2", key="main_badges1")
 		LAP = ui.tabs(options=['Sweet cassava', 'Bitter/Industrial'], default_value='Sweet cassava', key="Sweet cassava")
 			
 		if LAP == "Sweet cassava":
@@ -569,7 +569,7 @@ with LQD:
 
 			# Selector de variables para el eje Y utilizando st.selectbox
 			option = st.selectbox(
-			    'Select the variable you want to compare among the varieties',
+			    '*To visually compare the results of laboratory tests across different cassava varieties, select the variable you wish to display on the graph.*',
 			    options  # Usa el rango de columnas ajustado
 			)
 
