@@ -85,7 +85,7 @@ with MS:
 		#SWEET CASSAVA DATA
 		
 		
-		ui.badges(badge_list=[("To view cassava production data by segment (main group) and region (department), please select from the following options:", "primary")], class_name="flex gap-2", key="main_badges1")
+		ui.badges(badge_list=[("To view cassava production data by segment (main group) and region (department), please select from the following options:", "Secundary")], class_name="flex gap-2", key="main_badges1")
 		OP = ui.tabs(options=['Sweet cassava', 'Bitter/Industrial'], default_value='Sweet cassava', key="Sweet cassava")
 			
 		
