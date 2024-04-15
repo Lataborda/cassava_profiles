@@ -360,10 +360,11 @@ with BCP:
 			
 			#moment
 			moment = st.selectbox('**Select the moment:**',options = ['Purchasing cassava', "Consuming Cassava"])
-			
+
+			st.divider()
 			if moment == "Consuming Cassava":
 
-				st.write('***Result of open answers: How is the cassava that consumer likes most and less...***')
+				st.write('***Results from open-ended questions: What are the qualities of cassava that consumers like the most and the least?...***')
 
 				#Traits cassava (open responses) at eating moment
 				col1, col2 = st.columns(2)
@@ -426,7 +427,7 @@ with BCP:
 					)
 				
 				st.divider()
-				st.write('***Result of closed answers: How is the preference for each trait***')
+				st.write('***Results from closed questions: analyzing preferences for each trait***')
 				st.image('data/pe1.png', caption="Color preference")
 				st.divider()
 				st.image('data/pe2.png', caption="Friability preference")
@@ -437,7 +438,7 @@ with BCP:
 
 			elif moment == ("Purchasing cassava"): 
 				
-				st.write('***Result of open answers: How is the cassava that consumer likes most and less...***')
+				st.write('***Results from open-ended questions: What are the qualities of cassava that consumers like the most and the least?***')
 				#Traits cassava (open responses) at purchasing moment
 				col1, col2 = st.columns(2)
 
@@ -498,7 +499,7 @@ with BCP:
 					    },
 					)
 				st.divider()
-				st.write('***Result of closed answers: How is the preference for each trait***')
+				st.write('***Results from closed questions: analyzing preferences for each trait***')
 				st.image('data/pu1.png', caption="Preferred root length")
 				st.divider()
 				st.image('data/pu2.png', caption="Preferred peduncle length")
