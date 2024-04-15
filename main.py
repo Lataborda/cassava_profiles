@@ -47,7 +47,7 @@ with MS:
 		    dot = Digraph()
 		    dot.node('A', 'SMPS')
 		    dot.node('B', 'Bitter/Industrial')
-		    dot.node('C', 'Sweets',shape='diamond')
+		    dot.node('C', 'Sweet cassava',shape='diamond')
 		    dot.node('D', 'Low-processing derivatives')
 		    dot.node('E', 'Native Starch')
 		    dot.node('F', 'Fermented Starch')
@@ -86,12 +86,12 @@ with MS:
 		
 		
 		ui.badges(badge_list=[("To know the cassava production (ha) by segment (main group) and by region (department) please select each of the following options:", "secundary")], class_name="flex gap-2", key="main_badges1")
-		OP = ui.tabs(options=['Sweets', 'Bitter/Industrial'], default_value='Sweets', key="Sweets")
+		OP = ui.tabs(options=['Sweet cassava', 'Bitter/Industrial'], default_value='Sweet cassava', key="Sweet cassava")
 			
 		
 		st.divider()
 
-		if OP == "Sweets":
+		if OP == "Sweet cassava":
 
 			## GRAFICA
 			
@@ -206,14 +206,14 @@ with SMPS:
 	if DD == "**Segments of cassava seed products (SMPS)**":
 
 			ui.badges(badge_list=[("To know the location of the main Segments of cassava seed products (SMPS) in Colombia, please select the following options:", "secundary")], class_name="flex gap-2", key="main_badges1")
-			LO = ui.tabs(options=['Sweets', 'Bitter/Industrial'], default_value='Sweets', key="Sweets")
+			LO = ui.tabs(options=['Sweet cassava', 'Bitter/Industrial'], default_value='Sweet cassava', key="Sweet cassava")
 			
 			#LO = st.radio(
 		    #"To know the location of the main Segments of cassava seed products (SMPS) in Colombia, please select the following options:",
 		    #["Sweets","Bitter/Industrial"],
 		    #captions = ["Location of the main sweets_cassava seeds","Location of the main Bitter/Industrial cassava seeds"])
 
-			if LO == "Sweets":
+			if LO == "Sweet cassava":
 
 				st.subheader("Location of the main sweet cassava commercial varieties")
 				st.caption('click on each point to see the referent variety of its respective region')
