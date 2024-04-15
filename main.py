@@ -620,9 +620,9 @@ with LQD:
 
 			st.subheader("Protocols used")
 			st.caption("Click each reference to open its associated article link")
-			st.page_link("https://ifst.onlinelibrary.wiley.com/doi/full/10.1111/ijfs.14851", label="Starch content: Moreno J. et al. (2021).")
-			st.page_link("https://cdn.standards.iteh.ai/samples/13073/8f1ad914d6f0421ba804c4571d6830ca/ISO-6647-1987.pdf", label="Amylose percentage:Norme ISO 6647. (1987).")
-			st.page_link("https://onlinelibrary.wiley.com/doi/abs/10.1002/star.200800058", label="Starch viscosity: Sanchez T. et al. (2009).")
+			st.page_link("https://ifst.onlinelibrary.wiley.com/doi/full/10.1111/ijfs.14851", label="Starch content: Moreno J. et al. (2021)")
+			st.page_link("https://cdn.standards.iteh.ai/samples/13073/8f1ad914d6f0421ba804c4571d6830ca/ISO-6647-1987.pdf", label="Amylose percentage: Norme ISO 6647 (1987)")
+			st.page_link("https://onlinelibrary.wiley.com/doi/abs/10.1002/star.200800058", label="Starch viscosity: Sanchez T. et al. (2009)")
 
 			
 			st.divider()
