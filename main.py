@@ -222,9 +222,6 @@ with SMPS:
 				with open('data/depto.json', 'r', encoding='utf-8') as f:
 				    geo_json_data = json.load(f)
 				
-				# Usar la función con cache para cargar los datos GeoJSON
-				geo_json_data = load_data('data/depto.json')
-				
 				# Diccionarios con datos de ejemplo
 				departamento_colores = {
 				    "ANTIOQUIA": "green",
