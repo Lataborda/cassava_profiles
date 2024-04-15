@@ -31,7 +31,7 @@ with header:
 	DD = st.sidebar.radio(
 	    "Select the type of data you want to display",
 	    ["**Consumer market segments (MS)**", "**Segments of cassava seed products (SMPS)**", "**Boiled cassava preference**", "**Laboratory quality data**","**Product profile**"],
-	    captions = ["Main consumers of cassava in Colombia, areas allocated to each segment", "Varieties most commonly used for each market segment and their locations", "Main preference traits for boild cassava", "laboratory quality data for sweet and industria cassava","Product profile"])
+	    captions = ["Key Consumers and Geographic Allocation of Cassava in Colombia", "Key varieties and their locations for each market segment", "Key Preference Traits for Boiled Cassava", "Quality data for sweet and industrial cassava in the laboratory setting","Cassava Product profile"])
 
 with MS:
 		
