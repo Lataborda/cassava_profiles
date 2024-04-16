@@ -619,7 +619,9 @@ with LQD:
 			st.caption("Click each reference to open its associated article link")
 			st.page_link("https://ifst.onlinelibrary.wiley.com/doi/full/10.1111/ijfs.14851", label="Starch content: Moreno J. et al. (2021)")
 			st.page_link("https://cdn.standards.iteh.ai/samples/13073/8f1ad914d6f0421ba804c4571d6830ca/ISO-6647-1987.pdf", label="Amylose percentage: Norme ISO 6647 (1987)")
-			st.page_link("https://onlinelibrary.wiley.com/doi/abs/10.1002/star.200800058", label="Starch viscosity: Sanchez T. et al. (2009)")
+			st.page_link("http://lib3.dss.go.th/fulltext/Journal/Starch2005/2009/vol61%20n.1%202009%20p12-19.pdf", label="RVA for native starch: Sanchez T. et al. (2009)")
+			st.page_link("https://pubs.rsc.org/en/content/articlelanding/2022/fo/d2fo00048b", label=" RVA for fermented starch: Dufour T. et al. (2022)")
+			st.page_link("https://agritrop.cirad.fr/312828/", label=" pH of fermented starch: Brabet C. (1994)")
 
 			
 			st.divider()
