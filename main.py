@@ -221,7 +221,7 @@ with SMPS:
 				st.caption('click on each point to see the referent variety of its respective region')
 
 				#MAPA DEPARTAMENTOS VARIEDADES DULCES
-				with open('data/depto.json', 'r', encoding='utf-8') as f:
+				with open('data/depto1.json', 'r', encoding='utf-8') as f:
 				    geo_json_data = json.load(f)
 				
 				# Diccionarios con datos de ejemplo
@@ -294,7 +294,7 @@ with SMPS:
 
 			if LO == "Bitter/Industrial":
 
-				with open('data/depto.json', 'r', encoding='utf-8') as f:
+				with open('data/depto1.json', 'r', encoding='utf-8') as f:
 				    geo_json_data = json.load(f)
 
 				# Diccionarios con datos de ejemplo
