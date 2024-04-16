@@ -750,7 +750,7 @@ with PP:
 
 
 
-st.markdown('*Copyright (C) 2024 CIRAD, AGROSAVIA & CIAT*')
+st.markdown('*Copyright (C) 2024 CIAT, CIRAD & AGROSAVIA*')
 st.caption('**Authors: Alejandro Taborda, (latabordaa@unal.edu.co), Thierry Tran, Amparo Rosero, Katia Contreras, Luis Londoño, Alejandra Ospina, Jhon Moreno, Jorge Luna, Cristhian Duarte, Robert Andrade, Jhonathan Newby**')
 
 	
