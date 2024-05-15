@@ -753,7 +753,7 @@ with PP:
 
 
 st.markdown('*Copyright (C) 2024 CIAT, CIRAD & AGROSAVIA*')
-st.caption('**Authors: Alejandro Taborda, (latabordaa@unal.edu.co), Thierry Tran, Amparo Rosero, Katia Contreras, Luis Londoño, Alejandra Ospina, Jhon Moreno, Jorge Luna, Cristhian Duarte, Robert Andrade, Jhonathan Newby**')
+st.caption('**Authors: Alejandro Taborda, (latabordaa@unal.edu.co), Thierry Tran, Dominique Dufour, Amparo Rosero, Katia Contreras, Luis Londoño, Alejandra Ospina, Jhon Moreno, Jorge Luna, Cristhian Duarte, Robert Andrade, Jhonathan Newby**')
 
 	
 	
