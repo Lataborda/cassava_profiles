@@ -97,21 +97,21 @@ with MS:
 			
 			st.header("Areas (ha) of sweets_cassava(ha) by department")
 
-			df = pd.read_csv("data/Pd11.csv", usecols=["Departament", "sweets_cassava(ha)"])
-			Departament = df["Departament"]
+			df = pd.read_csv("data/Pd11.csv", usecols=["Department", "sweets_cassava(ha)"])
+			Department = df["Department"]
 			area = df["sweets_cassava(ha)"]
 
 			# Ordena los datos por departamento
-			df = df.sort_values(by="Departament")
+			df = df.sort_values(by="Department")
 
 			# Crea la figura
 			fig, ax = plt.subplots()
 
 			# Gráfica de barras
-			ax.bar(Departament, area)
+			ax.bar(Department, area)
 
 			# Personaliza la gráfica
-			ax.set_xlabel("Departament")
+			ax.set_xlabel("Department")
 			ax.set_ylabel("sweets_cassava(ha)")
 			ax.set_title("Sweet cassava area by Department")
 
@@ -132,7 +132,7 @@ with MS:
 			st.divider()
 			#TABLA
 			# Carga del archivo CSV
-			df = pd.read_csv("data/Pd11.csv", usecols=["Departament", "sweets_cassava(ha)"])
+			df = pd.read_csv("data/Pd11.csv", usecols=["Department", "sweets_cassava(ha)"])
 
 			# Convertir el DataFrame a HTML, excluyendo el índice
 			html = df.to_html(index=False)
@@ -148,21 +148,21 @@ with MS:
 
 			st.header("Areas (ha) of Bitter_cassava(ha) by department")
 
-			df = pd.read_csv("data/Pd11.csv", usecols=["Departament", "industria_cassava(ha)"])
-			Departament = df["Departament"]
+			df = pd.read_csv("data/Pd11.csv", usecols=["Department", "industria_cassava(ha)"])
+			Department = df["Department"]
 			area = df["industria_cassava(ha)"]
 
 			# Ordena los datos por departamento
-			df = df.sort_values(by="Departament")
+			df = df.sort_values(by="Department")
 
 			# Crea la figura
 			fig, ax = plt.subplots()
 
 			# Gráfica de barras
-			ax.bar(Departament, area)
+			ax.bar(Department, area)
 
 			# Personaliza la gráfica
-			ax.set_xlabel("Departament")
+			ax.set_xlabel("Department")
 			ax.set_ylabel("Industrial_cassava(ha)")
 			ax.set_title("Industrial cassava area by Department")
 
@@ -184,10 +184,10 @@ with MS:
 			#TABLA
 			
 			# Carga del archivo CSV
-			df = pd.read_csv("data/Pd11.csv", usecols=["Departament", "industria_cassava(ha)"])
+			df = pd.read_csv("data/Pd11.csv", usecols=["Department", "industria_cassava(ha)"])
 
 			# Suprimir las filas donde hay valores faltantes
-			df_clean = df.dropna(subset=["Departament", "industria_cassava(ha)"])
+			df_clean = df.dropna(subset=["Department", "industria_cassava(ha)"])
 
 			# Redondear los valores numéricos a 0 decimales y convertir a entero
 			df_clean["industria_cassava(ha)"] = df_clean["industria_cassava(ha)"].round(0).astype(int)
