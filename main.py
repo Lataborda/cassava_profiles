@@ -549,7 +549,7 @@ with LQD:
 			st.subheader("Protocols used")
 			st.caption("Click each reference to open its associated article link")
 			st.page_link("https://onlinelibrary.wiley.com/doi/abs/10.1002/star.200800058", label="Dry matter: Sanchez et al. (2009)")
-			st.page_link("https://www.sciencedirect.com/science/article/abs/pii/S096399691100562X", label="Carotene quantification: Sanchez et al. (2012)")
+			st.page_link("https://www.sciencedirect.com/science/article/abs/pii/S096399691100562X", label="Carotene quantification: Ceballos et al. (2012)")
 			st.page_link("https://agritrop.cirad.fr/602114/1/RTBfoods_SOP_Texture_Boiled%20cassava_Colombia.pdf", label="Boiling estimation: Tran T. et al. (2023)")
 			st.page_link("https://onlinelibrary.wiley.com/doi/abs/10.1002/jsfa.2740630305", label="Cyanide quantification: Essers S. et al. (1993)")
 			
